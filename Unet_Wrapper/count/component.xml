@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>count</spirit:name>
+  <spirit:version>1.1</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>rst</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>rst</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">rst</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>count</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>de6c02b4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>count</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>de6c02b4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>start</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>stop</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>counter</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/count.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_de6c02b4</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/count.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/count_v1_1.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>neg_rst_count_v1_1</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">count_v1_1</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>count_v1_1</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:count:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2025-04-09T17:17:15Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e05af9_ARCHIVE_LOCATION">c:/Vivado/ip_repo/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52ef21c_ARCHIVE_LOCATION">c:/Vivado/ip_repo/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a38fba3_ARCHIVE_LOCATION">c:/Vivado/ip_repo/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57434e1f_ARCHIVE_LOCATION">c:/Vivado/ip_repo/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c52ebb9_ARCHIVE_LOCATION">c:/Vivado/ip_repo/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dbf0ad6_ARCHIVE_LOCATION">c:/Vivado/ip_repo/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61076d55_ARCHIVE_LOCATION">c:/Vivado/ip_repo/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67496b27_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@114c133d_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cd4016c_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609804a7_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@538a5b86_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1718170f_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50e59dd0_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62cfde5a_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1353a55f_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46e3a586_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@720db0e8_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17d1bde9_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@241acab3_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f1ea3e_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4eae93a8_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@161f05a7_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f5f390e_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@332e4e3a_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a555701_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49575391_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ad4343c_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ff7583_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f0937e2_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c0e649_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a6deacc_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42cf6a55_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b06b1d8_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@523f1427_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a5ff2c8_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2999b877_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a8e2e46_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@263a8b28_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4068975f_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11b438ea_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@288f33c9_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@201fa89d_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d93d2d3_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e997107_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cfa583b_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c5b312_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6396c38f_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41f25003_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ca48403_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@122c456_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64c96d79_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40ba5f3c_ARCHIVE_LOCATION">c:/Users/user/Desktop/NMC_Project/Unet_Wrapper/IP/Unet_Wrapper/count</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="25031715"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="785f4dc0"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="0f5ffbee"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b2ea2393"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
